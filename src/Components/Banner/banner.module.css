@@ -1,0 +1,109 @@
+.banner {
+  color: white;
+  background-color: #141414;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 120vh;
+  min-height: 120svh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  width: min(740px, calc(100% - 48px));
+  margin-left: clamp(24px, 4vw, 72px);
+  padding: 112px 0 48px;
+  box-sizing: border-box;
+}
+.logoImg {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+.title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+.description {
+  width: min(100%, 620px);
+  line-height: 1.4;
+  padding-top: 0;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.descriptionCollapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.readMoreButton {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.readMoreButton:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+  border-radius: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: white;
+}
+
+.button:hover {
+  color: white;
+  background-color: rgba(109, 109, 110, 0.7);
+  transition: all 0.2s;
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    padding-top: 104px;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,127 @@
+.cardWrapper {
+  position: relative;
+  width: 290px;
+  height: 198px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: visible;
+  z-index: 1;
+}
+
+.poster {
+  width: 227px;
+  height: 128px;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.hoverCard {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  transform: translateX(-50%) scale(0.95);
+  width: 320px;
+  min-height: 305px;
+  height: auto;
+  background-color: #141414;
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* hidden default */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease visibility 0.3s ease;
+  /* optimization */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  pointer-events: none;
+  z-index: 99999999;
+}
+
+.cardWrapper:hover .hoverCard {
+  opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
+}
+.hoverCard:hover{
+    opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scale(1);
+        pointer-events: auto;
+}
+.hoverImage{
+ width: 100%;
+  height: 130px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+.badge {
+  background-color: #e50914;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 10px 0 0 12px;
+  font-weight: bold;
+}
+
+.buttonsRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+.metaRow {
+  color: white;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.circleButtonSmall {
+  border-radius: 50%;
+  background-color: rgba(109, 109, 110, 0.7);
+  border:1px solid #555;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.circleButtonSmall:hover {
+  background-color: rgba(109, 109, 110, 0.9);
+  border-color: #777;
+}
+.dot{
+    color:#888;
+    margin: 0 4px;
+}
+.geners {
+  color: #888;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.tag{
+    color:#ddd;
+}
+
+.circleButton:hover{
+    transform:scale(1.05);
+}
